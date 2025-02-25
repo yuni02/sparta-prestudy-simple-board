@@ -1,0 +1,36 @@
+package com.sparta.yuni.user.domain;
+
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import com.sparta.yuni.user.domain.UserInfo;
+import org.junit.jupiter.api.Test;
+
+class UserInfoTest {
+
+    @Test
+    void givenNameAndProfileImage_whenCreated_thenThrowNothing(){
+        // given
+        String name = "abcd";
+        String profileImageUrl = "";
+        String password = "";
+        // when
+
+        // then
+        assertDoesNotThrow(()-> new UserInfo(name, profileImageUrl, password));
+    }
+
+    @Test
+    void giveBlankNameAndProfileImage_whenCreated_thenThrowError(){
+        // given
+        String name = "";
+        String profileImageUrl = "";
+        String password = "";
+
+        // when
+        // then
+        assertThrows(IllegalArgumentException.class, ()-> new UserInfo(name, profileImageUrl, password));
+    }
+
+
+}
