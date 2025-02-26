@@ -1,4 +1,4 @@
-package com.sparta.yuni.common.domain.repository.entity;
+package com.sparta.yuni.common.repository.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;

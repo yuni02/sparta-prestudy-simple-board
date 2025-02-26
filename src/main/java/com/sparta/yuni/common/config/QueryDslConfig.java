@@ -1,4 +1,4 @@
-package com.sparta.yuni.common.domain.config;
+package com.sparta.yuni.common.config;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;

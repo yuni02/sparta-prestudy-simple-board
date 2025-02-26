@@ -1,10 +1,9 @@
 package com.sparta.yuni.post.repository.entity.like;
 
-import com.sparta.yuni.common.domain.repository.entity.TimeBaseEntity;
+import com.sparta.yuni.common.repository.entity.TimeBaseEntity;
 import com.sparta.yuni.post.domain.Post;
 import com.sparta.yuni.post.domain.comment.Comment;
 import com.sparta.yuni.user.domain.User;
-import jakarta.persistence.Embeddable;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

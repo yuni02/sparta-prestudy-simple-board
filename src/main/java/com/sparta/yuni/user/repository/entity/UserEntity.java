@@ -1,7 +1,7 @@
 package com.sparta.yuni.user.repository.entity;
 
 import com.sparta.yuni.common.domain.PositiveIntegerCounter;
-import com.sparta.yuni.common.domain.repository.entity.TimeBaseEntity;
+import com.sparta.yuni.common.repository.entity.TimeBaseEntity;
 import com.sparta.yuni.user.domain.User;
 import com.sparta.yuni.user.domain.UserInfo;
 import jakarta.persistence.Entity;
@@ -12,12 +12,14 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
 @Table(name = "sample_board_user")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
+@DynamicUpdate
 public class UserEntity extends TimeBaseEntity {
 
     @Id

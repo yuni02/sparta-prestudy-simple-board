@@ -1,7 +1,7 @@
 package com.sparta.yuni.post.repository.entity.post;
 
 import com.sparta.yuni.common.domain.PositiveIntegerCounter;
-import com.sparta.yuni.common.domain.repository.entity.TimeBaseEntity;
+import com.sparta.yuni.common.repository.entity.TimeBaseEntity;
 import com.sparta.yuni.post.domain.Post;
 import com.sparta.yuni.post.domain.content.PostContent;
 import com.sparta.yuni.post.domain.content.PostPublicationState;

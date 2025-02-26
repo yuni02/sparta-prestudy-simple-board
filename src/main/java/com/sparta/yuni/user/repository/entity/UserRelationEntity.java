@@ -1,6 +1,6 @@
 package com.sparta.yuni.user.repository.entity;
 
-import com.sparta.yuni.common.domain.repository.entity.TimeBaseEntity;
+import com.sparta.yuni.common.repository.entity.TimeBaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.IdClass;

@@ -4,7 +4,6 @@ import com.sparta.yuni.user.application.dto.CreateUserRequestDto;
 import com.sparta.yuni.user.application.interfaces.UserRepository;
 import com.sparta.yuni.user.domain.User;
 import com.sparta.yuni.user.domain.UserInfo;
-import java.util.IllformedLocaleException;
 import org.springframework.stereotype.Service;
 
 @Service

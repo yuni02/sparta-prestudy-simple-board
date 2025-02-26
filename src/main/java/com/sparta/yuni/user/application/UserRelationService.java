@@ -3,7 +3,9 @@ package com.sparta.yuni.user.application;
 import com.sparta.yuni.user.application.dto.FollowUserRequestDto;
 import com.sparta.yuni.user.application.interfaces.UserRelationRepository;
 import com.sparta.yuni.user.domain.User;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserRelationService {
     private final UserService userService;
     private final UserRelationRepository userRelationRepository;
@@ -15,7 +17,7 @@ public class UserRelationService {
     }
 
     public void follow(FollowUserRequestDto dto){
-        User user = userService.getUser(dto.targetUserId());
+        User user = userService.getUser(dto.userId());
         User targetUser = userService.getUser(dto.targetUserId());
 
         if(userRelationRepository.isAlreadyFollow(user, targetUser)){
@@ -28,7 +30,7 @@ public class UserRelationService {
 
     public void unfollow(FollowUserRequestDto dto){
 
-        User user = userService.getUser(dto.targetUserId());
+        User user = userService.getUser(dto.userId());
         User targetUser = userService.getUser(dto.targetUserId());
 
         if(!userRelationRepository.isAlreadyFollow(user, targetUser)){
