@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c22eb15f-a9b3-4de0-85bc-7ae108b3924c" name="Changes" comment="[feat]: 커뮤니티 게시판 User, Post, Comment, Like 엔티티 객체 생성해서 디비 연동 후 Table 생성">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/dto/GetUserListResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/entity/UserRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/jpa/JpaUserListQueryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/jpa/JpaUserRepository.java" afterDir="false" />
+    <list default="true" id="c22eb15f-a9b3-4de0-85bc-7ae108b3924c" name="Changes" comment="[feat]: 사용자 정보 조회 기능 추가">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/common/domain/config/QueryDslConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/jpa/JpaUserListPagingQueryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/interfaces/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/interfaces/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/repository/FakeUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/repository/FakeUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +32,23 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="community_feed" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="community_feed" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="community_feed" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="community_feed" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -113,47 +124,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build community_feed.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PositiveIntegerCounterTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PositiveIntegerCounterTest.givenCreatedAndIncrease_whenDecrease_thenCountIsZero.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PositiveIntegerCounterTest.givenCreated_whenIncrease_thenCountIsOne.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Tests in 'org.fastcampus'.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserInfoTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserServiceTest.givenUserInfoDto_whenCreateUser_thenCanFindUser.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserTest.givenTwoSameIdUser_whenHashCode_thenEqual.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserTest.givenTwoUserUser1FollowUser2_whenUnfollow_thenDecreaseUserCount.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserTest.givenTwoUser_whenEqual_thenReturnFalse.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserTest.givenTwoUser_whenUnfollow_thenNotDecreaseUserCount.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserTest.givenTwoUser_whenUser1FollowUser2_thenIncreaseUserCount.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.community_feed [:Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jennie/Documents/fastcampus/community_feed/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.platform.ide.impl.presentationAssistant.PresentationAssistantConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build community_feed.executor": "Run",
+    "Gradle.PositiveIntegerCounterTest.executor": "Run",
+    "Gradle.PositiveIntegerCounterTest.givenCreatedAndIncrease_whenDecrease_thenCountIsZero.executor": "Run",
+    "Gradle.PositiveIntegerCounterTest.givenCreated_whenIncrease_thenCountIsOne.executor": "Run",
+    "Gradle.Tests in 'org.fastcampus'.executor": "Run",
+    "Gradle.UserInfoTest.executor": "Run",
+    "Gradle.UserServiceTest.executor": "Run",
+    "Gradle.UserServiceTest.givenUserInfoDto_whenCreateUser_thenCanFindUser.executor": "Run",
+    "Gradle.UserTest (1).executor": "Run",
+    "Gradle.UserTest.executor": "Run",
+    "Gradle.UserTest.givenTwoSameIdUser_whenHashCode_thenEqual.executor": "Run",
+    "Gradle.UserTest.givenTwoUserUser1FollowUser2_whenUnfollow_thenDecreaseUserCount.executor": "Run",
+    "Gradle.UserTest.givenTwoUser_whenEqual_thenReturnFalse.executor": "Run",
+    "Gradle.UserTest.givenTwoUser_whenUnfollow_thenNotDecreaseUserCount.executor": "Run",
+    "Gradle.UserTest.givenTwoUser_whenUser1FollowUser2_thenIncreaseUserCount.executor": "Run",
+    "Gradle.community_feed [:Main.main()].executor": "Run",
+    "Gradle.community_feed [clean].executor": "Run",
+    "Gradle.community_feed [compileJava].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "Spring Boot.Application.executor": "Run",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/jennie/Documents/fastcampus/community_feed/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "com.intellij.platform.ide.impl.presentationAssistant.PresentationAssistantConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -165,7 +178,7 @@
       <recent name="com.sparta.yuni.post.repository.entity.like" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.UserServiceTest">
+  <component name="RunManager" selected="Gradle.community_feed [compileJava]">
     <configuration name="UserServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -180,30 +193,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.sparta.yuni.user.application.UserServiceTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="UserServiceTest.givenUserInfoDto_whenCreateUser_thenCanFindUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.fastcampus.user.application.UserServiceTest.givenUserInfoDto_whenCreateUser_thenCanFindUser&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -238,28 +227,48 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="UserTest.givenTwoUser_whenUnfollow_thenNotDecreaseUserCount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="community_feed [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.fastcampus.user.domain.UserTest.givenTwoUser_whenUnfollow_thenNotDecreaseUserCount&quot;" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="community_feed [compileJava]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="compileJava" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
@@ -277,19 +286,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.community_feed [clean]" />
+      <item itemvalue="Gradle.community_feed [compileJava]" />
       <item itemvalue="Gradle.UserServiceTest" />
-      <item itemvalue="Gradle.UserServiceTest.givenUserInfoDto_whenCreateUser_thenCanFindUser" />
-      <item itemvalue="Gradle.UserTest.givenTwoUser_whenUnfollow_thenNotDecreaseUserCount" />
       <item itemvalue="Gradle.UserTest (1)" />
       <item itemvalue="Spring Boot.Application" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.community_feed [compileJava]" />
+        <item itemvalue="Gradle.community_feed [clean]" />
         <item itemvalue="Gradle.UserServiceTest" />
         <item itemvalue="Spring Boot.Application" />
         <item itemvalue="Gradle.UserTest (1)" />
-        <item itemvalue="Gradle.UserServiceTest.givenUserInfoDto_whenCreateUser_thenCanFindUser" />
-        <item itemvalue="Gradle.UserTest.givenTwoUser_whenUnfollow_thenNotDecreaseUserCount" />
       </list>
     </recent_temporary>
   </component>
@@ -322,7 +331,7 @@
       <workItem from="1740229277133" duration="9957000" />
       <workItem from="1740415442692" duration="2311000" />
       <workItem from="1740483995103" duration="12522000" />
-      <workItem from="1740563432298" duration="511000" />
+      <workItem from="1740563432298" duration="2095000" />
     </task>
     <task id="LOCAL-00001" summary="[feat]: 커뮤니티 게시판 User, Post, Comment, Like 엔티티 객체 생성해서 디비 연동 후 Table 생성">
       <option name="closed" value="true" />
@@ -332,7 +341,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740495613333</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[feat]: 사용자 정보 조회 기능 추가">
+      <option name="closed" value="true" />
+      <created>1740564233805</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740564233805</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +357,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[feat]: 커뮤니티 게시판 User, Post, Comment, Like 엔티티 객체 생성해서 디비 연동 후 Table 생성" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat]: 커뮤니티 게시판 User, Post, Comment, Like 엔티티 객체 생성해서 디비 연동 후 Table 생성" />
+    <MESSAGE value="[feat]: 사용자 정보 조회 기능 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat]: 사용자 정보 조회 기능 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
