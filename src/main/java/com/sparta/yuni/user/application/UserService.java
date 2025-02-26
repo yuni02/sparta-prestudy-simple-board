@@ -1,6 +1,7 @@
 package com.sparta.yuni.user.application;
 
 import com.sparta.yuni.user.application.dto.CreateUserRequestDto;
+import com.sparta.yuni.user.application.dto.GetUserResponseDto;
 import com.sparta.yuni.user.application.interfaces.UserRepository;
 import com.sparta.yuni.user.domain.User;
 import com.sparta.yuni.user.domain.UserInfo;
@@ -23,6 +24,11 @@ public class UserService {
 
     public User getUser(Long id) {
         return userRepository.findById(id);
+    }
+
+    public GetUserResponseDto getUserProfile(Long id) {
+        User user = getUser(id);
+        return new GetUserResponseDto(user);
     }
 
 }
