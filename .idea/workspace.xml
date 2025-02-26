@@ -4,53 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c22eb15f-a9b3-4de0-85bc-7ae108b3924c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/common/domain/repository/entity/TimeBaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/common/domain/ui/HealthCheckController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/comment/CommentEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/like/LikeEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/like/LikeIdEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/like/LikeTarget.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/post/PostEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/post/PostPublicationStateConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/entity/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/entity/UserRelationEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/entity/UserRelationIdEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/application/UserRelationServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c22eb15f-a9b3-4de0-85bc-7ae108b3924c" name="Changes" comment="[feat]: 커뮤니티 게시판 User, Post, Comment, Like 엔티티 객체 생성해서 디비 연동 후 Table 생성">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/dto/GetUserListResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/entity/UserRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/jpa/JpaUserListQueryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/jpa/JpaUserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/common/domain/PositiveIntegerCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/common/domain/PositiveIntegerCounter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/post/domain/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/post/domain/comment/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/comment/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/post/domain/common/DatetimeInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/common/DatetimeInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/post/domain/content/CommentContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/content/CommentContent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/post/domain/content/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/content/Content.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/post/domain/content/PostContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/content/PostContent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/post/domain/content/PostPublicationState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/content/PostPublicationState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/post/dto/GetContentResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/dto/GetContentResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/user/application/UserRelationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserRelationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/user/application/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/user/application/dto/CreateUserRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/dto/CreateUserRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/user/application/dto/FollowUserRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/dto/FollowUserRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/user/application/interfaces/UserRelationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/interfaces/UserRelationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/user/application/interfaces/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/interfaces/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/user/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastcampus/user/domain/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/domain/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/fastcampus/common/domain/PositiveIntegerCounterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/common/domain/PositiveIntegerCounterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/fastcampus/user/application/UserRelationServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/fastcampus/user/application/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/application/UserServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/fastcampus/user/domain/UserInfoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/domain/UserInfoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/fastcampus/user/domain/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/domain/UserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/fastcampus/user/repository/FakeUserRelationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/repository/FakeUserRelationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/fastcampus/user/repository/FakeUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/repository/FakeUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/interfaces/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/interfaces/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/repository/FakeUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/repository/FakeUserRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +62,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;yuni02&quot;
+  }
+}</component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -123,6 +93,12 @@
       </RecentBranches>
     </option>
   </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/yuni02/sparta-prestudy-simple-board.git&quot;,
+    &quot;accountId&quot;: &quot;ff5d3aed-5088-44c5-bb3e-cd6e33869996&quot;
+  }
+}</component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
   </component>
@@ -137,54 +113,83 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build community_feed.executor": "Run",
-    "Gradle.PositiveIntegerCounterTest.executor": "Run",
-    "Gradle.PositiveIntegerCounterTest.givenCreatedAndIncrease_whenDecrease_thenCountIsZero.executor": "Run",
-    "Gradle.PositiveIntegerCounterTest.givenCreated_whenIncrease_thenCountIsOne.executor": "Run",
-    "Gradle.Tests in 'org.fastcampus'.executor": "Run",
-    "Gradle.UserInfoTest.executor": "Run",
-    "Gradle.UserServiceTest.givenUserInfoDto_whenCreateUser_thenCanFindUser.executor": "Run",
-    "Gradle.UserTest (1).executor": "Run",
-    "Gradle.UserTest.executor": "Run",
-    "Gradle.UserTest.givenTwoSameIdUser_whenHashCode_thenEqual.executor": "Run",
-    "Gradle.UserTest.givenTwoUserUser1FollowUser2_whenUnfollow_thenDecreaseUserCount.executor": "Run",
-    "Gradle.UserTest.givenTwoUser_whenEqual_thenReturnFalse.executor": "Run",
-    "Gradle.UserTest.givenTwoUser_whenUnfollow_thenNotDecreaseUserCount.executor": "Run",
-    "Gradle.UserTest.givenTwoUser_whenUser1FollowUser2_thenIncreaseUserCount.executor": "Run",
-    "Gradle.community_feed [:Main.main()].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.Application.executor": "Run",
-    "git-widget-placeholder": "dev",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/jennie/Documents/fastcampus/community_feed/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "com.intellij.platform.ide.impl.presentationAssistant.PresentationAssistantConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build community_feed.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PositiveIntegerCounterTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PositiveIntegerCounterTest.givenCreatedAndIncrease_whenDecrease_thenCountIsZero.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PositiveIntegerCounterTest.givenCreated_whenIncrease_thenCountIsOne.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'org.fastcampus'.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserInfoTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserServiceTest.givenUserInfoDto_whenCreateUser_thenCanFindUser.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserTest.givenTwoSameIdUser_whenHashCode_thenEqual.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserTest.givenTwoUserUser1FollowUser2_whenUnfollow_thenDecreaseUserCount.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserTest.givenTwoUser_whenEqual_thenReturnFalse.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserTest.givenTwoUser_whenUnfollow_thenNotDecreaseUserCount.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserTest.givenTwoUser_whenUser1FollowUser2_thenIncreaseUserCount.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.community_feed [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jennie/Documents/fastcampus/community_feed/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.platform.ide.impl.presentationAssistant.PresentationAssistantConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.sparta.yuni.post.repository.entity.like" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager" selected="Gradle.UserServiceTest">
+    <configuration name="UserServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.sparta.yuni.user.application.UserServiceTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="UserServiceTest.givenUserInfoDto_whenCreateUser_thenCanFindUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -223,30 +228,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;org.sparta.yuni.user.domain.UserTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="UserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.fastcampus.user.domain.UserTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -296,19 +277,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.UserServiceTest" />
       <item itemvalue="Gradle.UserServiceTest.givenUserInfoDto_whenCreateUser_thenCanFindUser" />
-      <item itemvalue="Gradle.UserTest" />
       <item itemvalue="Gradle.UserTest.givenTwoUser_whenUnfollow_thenNotDecreaseUserCount" />
       <item itemvalue="Gradle.UserTest (1)" />
       <item itemvalue="Spring Boot.Application" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.UserServiceTest" />
         <item itemvalue="Spring Boot.Application" />
         <item itemvalue="Gradle.UserTest (1)" />
         <item itemvalue="Gradle.UserServiceTest.givenUserInfoDto_whenCreateUser_thenCanFindUser" />
         <item itemvalue="Gradle.UserTest.givenTwoUser_whenUnfollow_thenNotDecreaseUserCount" />
-        <item itemvalue="Gradle.UserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -340,12 +321,26 @@
       <workItem from="1739968901470" duration="2683000" />
       <workItem from="1740229277133" duration="9957000" />
       <workItem from="1740415442692" duration="2311000" />
-      <workItem from="1740483995103" duration="9443000" />
+      <workItem from="1740483995103" duration="12522000" />
+      <workItem from="1740563432298" duration="511000" />
     </task>
+    <task id="LOCAL-00001" summary="[feat]: 커뮤니티 게시판 User, Post, Comment, Like 엔티티 객체 생성해서 디비 연동 후 Table 생성">
+      <option name="closed" value="true" />
+      <created>1740495613333</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740495613333</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[feat]: 커뮤니티 게시판 User, Post, Comment, Like 엔티티 객체 생성해서 디비 연동 후 Table 생성" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat]: 커뮤니티 게시판 User, Post, Comment, Like 엔티티 객체 생성해서 디비 연동 후 Table 생성" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
