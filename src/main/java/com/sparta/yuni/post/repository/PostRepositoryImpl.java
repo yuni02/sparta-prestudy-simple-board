@@ -4,14 +4,12 @@ import com.sparta.yuni.post.application.interfaces.PostRepository;
 import com.sparta.yuni.post.domain.Post;
 import com.sparta.yuni.post.repository.entity.post.PostEntity;
 import com.sparta.yuni.post.repository.jpa.JpaPostRepository;
-import jdk.jfr.Registered;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 @Repository
 @RequiredArgsConstructor
 public class PostRepositoryImpl implements PostRepository {
-
 
     private final JpaPostRepository jpaPostRepository;
 
@@ -23,15 +21,12 @@ public class PostRepositoryImpl implements PostRepository {
 
     @Override
     public Post save(Post post) {
-        PostEntity postEntity = new PostEntity();
+        PostEntity postEntity = new PostEntity(post);
+        if(post.getId()!=null){
+            jpaPostRepository.updatePostEntity(postEntity);
+            return postEntity.toPost();
+        }
         postEntity = jpaPostRepository.save(postEntity);
         return postEntity.toPost();
     }
-
-    @Override
-    public Post publish(Post post) {
-        return null;
-    }
-
-
 }

@@ -35,6 +35,8 @@ public class PostEntity extends TimeBaseEntity {
     @JoinColumn(name="author_id", foreignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT))
     private UserEntity author;
 
+    private String password;
+
 
     private String title;
     private String content;
@@ -49,12 +51,14 @@ public class PostEntity extends TimeBaseEntity {
         this.author = new UserEntity(post.getAuthor());
         this.content = post.getContent();
         this.state = post.getState();
+        this.password = post.getPassword();
         this.likeCount = post.getLikeCount();
     }
 
     public Post toPost(){
         return Post.builder()
             .id(id)
+            .password(password)
             .author(author.toUser())
             .content(new PostContent(content))
             .state(state)

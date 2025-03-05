@@ -2,6 +2,7 @@ package com.sparta.yuni.post.repository.entity.comment;
 
 
 import com.sparta.yuni.common.domain.PositiveIntegerCounter;
+import com.sparta.yuni.common.repository.entity.TimeBaseEntity;
 import com.sparta.yuni.post.domain.comment.Comment;
 import com.sparta.yuni.post.domain.content.CommentContent;
 import com.sparta.yuni.post.repository.entity.post.PostEntity;
@@ -24,7 +25,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-public class CommentEntity {
+public class CommentEntity extends TimeBaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -57,7 +58,6 @@ public class CommentEntity {
             .content(new CommentContent(content))
             .likeCounter(new PositiveIntegerCounter(likeCount))
             .build();
-
     }
 
 }

@@ -4,8 +4,7 @@ import com.sparta.yuni.post.domain.common.DatetimeInfo;
 import lombok.Getter;
 
 @Getter
-public abstract class Content{
-
+public abstract class Content {
     String contentText;
     final DatetimeInfo datetimeInfo;
 
@@ -26,6 +25,4 @@ public abstract class Content{
     public boolean isEdited() {
         return datetimeInfo.isEdited();
     }
-
-
 }

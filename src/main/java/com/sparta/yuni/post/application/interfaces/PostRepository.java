@@ -6,7 +6,6 @@ public interface PostRepository {
 
     Post findById(Long id);
     Post save(Post post);
-    Post publish(Post post);
 
 
 

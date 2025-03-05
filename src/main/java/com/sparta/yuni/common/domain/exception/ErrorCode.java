@@ -12,7 +12,6 @@ public enum ErrorCode {
     private final Integer code;
     private final String message;
 
-
     ErrorCode(Integer code, String message) {
         this.code = code;
         this.message = message;

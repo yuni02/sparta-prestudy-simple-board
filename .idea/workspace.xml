@@ -4,21 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c22eb15f-a9b3-4de0-85bc-7ae108b3924c" name="Changes" comment="[feat]: 사용자 팔로우, 팔로잉 API Controller 추가">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/LikeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/dto/CreatePostRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/dto/LikeRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/dto/UpdatePostRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/PostRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaCommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaLikeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaPostRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/dto/GetUserResponseDto.java" afterDir="false" />
+    <list default="true" id="c22eb15f-a9b3-4de0-85bc-7ae108b3924c" name="Changes" comment="[feat]: 게시판 작성 소스 추가 -&gt; 저장 및 조회기능 구현">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/dto/CreateCommentRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/dto/UpdateCommentRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/CommentRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/ui/CommentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/ui/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/ui/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/common/domain/exception/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/common/domain/exception/ErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/content/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/content/Content.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/dto/UpdatePostRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/dto/UpdatePostRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/LikeRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/LikeRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/PostRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/PostRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/comment/CommentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/comment/CommentEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/post/PostEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/post/PostEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaCommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaCommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaPostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaPostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/ui/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/ui/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +82,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Record" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -190,11 +197,36 @@
       <recent name="com.sparta.yuni.common.domain" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sparta.yuni.post.dto" />
       <recent name="com.sparta.yuni.user.ui" />
       <recent name="com.sparta.yuni.post.repository.entity.like" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="PositiveIntegerCounterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.sparta.yuni.common.domain.PositiveIntegerCounterTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="UserServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -209,30 +241,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.sparta.yuni.user.application.UserServiceTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="UserTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.sparta.yuni.user.domain.UserTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -302,19 +310,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.PositiveIntegerCounterTest" />
       <item itemvalue="Gradle.community_feed [clean]" />
       <item itemvalue="Gradle.community_feed [compileJava]" />
       <item itemvalue="Gradle.UserServiceTest" />
-      <item itemvalue="Gradle.UserTest (1)" />
       <item itemvalue="Spring Boot.Application" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="Gradle.PositiveIntegerCounterTest" />
         <item itemvalue="Gradle.community_feed [compileJava]" />
         <item itemvalue="Gradle.community_feed [clean]" />
         <item itemvalue="Gradle.UserServiceTest" />
-        <item itemvalue="Gradle.UserTest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -347,7 +355,10 @@
       <workItem from="1740229277133" duration="9957000" />
       <workItem from="1740415442692" duration="2311000" />
       <workItem from="1740483995103" duration="12522000" />
-      <workItem from="1740563432298" duration="7661000" />
+      <workItem from="1740563432298" duration="15586000" />
+      <workItem from="1741081420544" duration="8587000" />
+      <workItem from="1741146469854" duration="2431000" />
+      <workItem from="1741152116851" duration="13165000" />
     </task>
     <task id="LOCAL-00001" summary="[feat]: 커뮤니티 게시판 User, Post, Comment, Like 엔티티 객체 생성해서 디비 연동 후 Table 생성">
       <option name="closed" value="true" />
@@ -381,7 +392,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740569155757</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[feat]: 게시판 관련 클래스 추가">
+      <option name="closed" value="true" />
+      <created>1740571144200</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740571144200</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[feat]: 게시판 작성 소스 추가 -&gt; 저장 및 조회기능 구현">
+      <option name="closed" value="true" />
+      <created>1740572629250</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740572629250</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,7 +419,9 @@
     <MESSAGE value="[feat]: 사용자 정보 조회 기능 추가" />
     <MESSAGE value="[feat]: 사용자 페이지별로 조회하는 기능 추가 (QueryDsl 적용)" />
     <MESSAGE value="[feat]: 사용자 팔로우, 팔로잉 API Controller 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat]: 사용자 팔로우, 팔로잉 API Controller 추가" />
+    <MESSAGE value="[feat]: 게시판 관련 클래스 추가" />
+    <MESSAGE value="[feat]: 게시판 작성 소스 추가 -&gt; 저장 및 조회기능 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat]: 게시판 작성 소스 추가 -&gt; 저장 및 조회기능 구현" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -407,8 +436,53 @@
           <line>4</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostService.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/CommentService.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/CommentRepositoryImpl.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostService.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/LikeRepositoryImpl.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/CommentService.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/ui/CommentController.java</url>
+          <line>31</line>
+          <properties class="com.sparta.yuni.post.ui.CommentController" method="updateComment">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="comment.author" />
+        <watch expression="args" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
