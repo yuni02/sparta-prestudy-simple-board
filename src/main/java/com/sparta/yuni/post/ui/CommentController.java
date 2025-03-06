@@ -7,6 +7,7 @@ import com.sparta.yuni.post.dto.CreateCommentRequestDto;
 import com.sparta.yuni.post.dto.LikeRequestDto;
 import com.sparta.yuni.post.dto.UpdateCommentRequestDto;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/comment")
 @RequiredArgsConstructor
+@Slf4j
 public class CommentController {
 
     private final CommentService commentService;
@@ -36,7 +38,11 @@ public class CommentController {
 
     @PostMapping("/like")
     public Response<Void> likeComment(@RequestBody LikeRequestDto dto) {
-        commentService.likeComment(dto);
+       try {
+           commentService.likeComment(dto);
+       }catch(Exception e) {
+           log.error(e.getMessage());
+       }
         return Response.ok(null);
     }
 

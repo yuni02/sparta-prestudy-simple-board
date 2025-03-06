@@ -17,15 +17,15 @@ import lombok.NoArgsConstructor;
 public class LikeEntity extends TimeBaseEntity {
 
     @EmbeddedId
-    private LikeIdEntity id;
+    private LikeId id;
 
     public LikeEntity(Post post, User likedUser) {
-        this.id = new LikeIdEntity(post.getId(), likedUser.getId(), LikeTarget.POST.name());
+        this.id = new LikeId(post.getId(), likedUser.getId(), LikeTarget.POST.name());
 
     }
 
     public LikeEntity(Comment comment, User likedUser) {
-        this.id = new LikeIdEntity(comment.getId(), likedUser.getId(), LikeTarget.COMMENT.name());
+        this.id = new LikeId(comment.getId(), likedUser.getId(), LikeTarget.COMMENT.name());
 
     }
 

@@ -49,8 +49,8 @@ public class Comment {
     }
 
     public void like(User user) {
-        if (!this.author.equals(user)) {
-            throw new IllegalArgumentException();
+        if (this.author.equals(user)) {
+            throw new IllegalArgumentException("author cannot like own comment");
         }
 
         likeCounter.increase();
