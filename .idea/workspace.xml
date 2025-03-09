@@ -4,16 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c22eb15f-a9b3-4de0-85bc-7ae108b3924c" name="Changes" comment="[feat]: 댓글 수정, 작성 / 글 작성, 수정 기능 구현">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/common/config/SwaggerConfig.java" afterDir="false" />
+    <list default="true" id="c22eb15f-a9b3-4de0-85bc-7ae108b3924c" name="Changes" comment="[fix]: swagger 설정 및 모듈 추가 , comment 작성 api 오류 수정 &#10;&#10;- Comment의 like 메서드에서 저자랑 일치하는 지 검증하는 코드 조건이 거꾸로 되어있었음.">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2025__2__26__19_05_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/comment/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/comment/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/like/LikeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/like/LikeEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/like/LikeIdEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/like/LikeId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/CommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/LikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/LikeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/CommentRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/CommentRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/LikeRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/LikeRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/PostRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/PostRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/post/PostEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/post/PostEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaCommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaCommentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaLikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaLikeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/ui/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/ui/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/entity/UserRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaPostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaPostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/ui/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/ui/PostController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -346,7 +351,9 @@
       <workItem from="1740563432298" duration="15586000" />
       <workItem from="1741081420544" duration="8587000" />
       <workItem from="1741146469854" duration="2431000" />
-      <workItem from="1741152116851" duration="20257000" />
+      <workItem from="1741152116851" duration="20973000" />
+      <workItem from="1741417979707" duration="14085000" />
+      <workItem from="1741557746742" duration="356000" />
     </task>
     <task id="LOCAL-00001" summary="[feat]: 커뮤니티 게시판 User, Post, Comment, Like 엔티티 객체 생성해서 디비 연동 후 Table 생성">
       <option name="closed" value="true" />
@@ -404,7 +411,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741187611273</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[fix]: swagger 설정 및 모듈 추가 , comment 작성 api 오류 수정 &#10;&#10;- Comment의 like 메서드에서 저자랑 일치하는 지 검증하는 코드 조건이 거꾸로 되어있었음.">
+      <option name="closed" value="true" />
+      <created>1741233132569</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1741233132569</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +433,8 @@
     <MESSAGE value="[feat]: 게시판 관련 클래스 추가" />
     <MESSAGE value="[feat]: 게시판 작성 소스 추가 -&gt; 저장 및 조회기능 구현" />
     <MESSAGE value="[feat]: 댓글 수정, 작성 / 글 작성, 수정 기능 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat]: 댓글 수정, 작성 / 글 작성, 수정 기능 구현" />
+    <MESSAGE value="[fix]: swagger 설정 및 모듈 추가 , comment 작성 api 오류 수정 &#10;&#10;- Comment의 like 메서드에서 저자랑 일치하는 지 검증하는 코드 조건이 거꾸로 되어있었음." />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix]: swagger 설정 및 모듈 추가 , comment 작성 api 오류 수정 &#10;&#10;- Comment의 like 메서드에서 저자랑 일치하는 지 검증하는 코드 조건이 거꾸로 되어있었음." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -435,7 +451,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostService.java</url>
-          <line>39</line>
+          <line>42</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -445,7 +461,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostService.java</url>
-          <line>52</line>
+          <line>55</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -459,14 +475,14 @@
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/ui/CommentController.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/comment/Comment.java</url>
           <line>52</line>
           <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/ui/PostController.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

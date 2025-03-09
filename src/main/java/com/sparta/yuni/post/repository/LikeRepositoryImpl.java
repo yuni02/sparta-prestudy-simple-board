@@ -69,4 +69,17 @@ public class LikeRepositoryImpl implements LikeRepository {
         jpaCommentRepository.updateLikeCount(comment);
 
     }
+
+    @Override
+    public void deleteAllByTargetId(Long targetId) {
+        jpaLikeRepository.deleteAllByPostTargetId(targetId);
+    }
+
+    @Override
+    public void deleteAllByComment(Comment comment) {
+        jpaLikeRepository.deleteAllByCommentTargetId(comment.getId());
+
+    }
+
+
 }

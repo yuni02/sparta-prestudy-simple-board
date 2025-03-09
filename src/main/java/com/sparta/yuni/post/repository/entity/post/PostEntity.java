@@ -19,6 +19,7 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.ColumnDefault;
 
 @Entity
 @Table(name="sample_board_post")
@@ -42,6 +43,9 @@ public class PostEntity extends TimeBaseEntity {
     private String content;
 
     private Integer likeCount;
+
+    @ColumnDefault("0")
+    private int commentCount;
 
     @Convert(converter = PostPublicationStateConverter.class)
     private PostPublicationState state;

@@ -8,5 +8,5 @@ public interface PostRepository {
     Post save(Post post);
 
 
-
+    void delete(Long id);
 }
