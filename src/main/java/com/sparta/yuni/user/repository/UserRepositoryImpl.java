@@ -1,10 +1,9 @@
-package com.sparta.yuni.user.application;
+package com.sparta.yuni.user.repository;
 
 import com.sparta.yuni.user.application.interfaces.UserRepository;
 import com.sparta.yuni.user.domain.User;
 import com.sparta.yuni.user.repository.entity.UserEntity;
 import com.sparta.yuni.user.repository.jpa.JpaUserRepository;
-import java.util.Optional;
 import lombok.AllArgsConstructor;
 
 import org.springframework.stereotype.Repository;

@@ -4,6 +4,10 @@ import com.sparta.yuni.post.application.interfaces.PostRepository;
 import com.sparta.yuni.post.domain.Post;
 import com.sparta.yuni.post.repository.entity.post.PostEntity;
 import com.sparta.yuni.post.repository.jpa.JpaPostRepository;
+import com.sparta.yuni.post.repository.post_queue.UserPostQueueCommandRepository;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -12,6 +16,7 @@ import org.springframework.stereotype.Repository;
 public class PostRepositoryImpl implements PostRepository {
 
     private final JpaPostRepository jpaPostRepository;
+    private final UserPostQueueCommandRepository commandRepository;
 
     @Override
     public Post findById(Long id) {
@@ -27,11 +32,20 @@ public class PostRepositoryImpl implements PostRepository {
             return postEntity.toPost();
         }
         postEntity = jpaPostRepository.save(postEntity);
+        commandRepository.publishPost(postEntity);
         return postEntity.toPost();
     }
 
     @Override
-    public void delete(Long id) {
+    public List<Post> findByAuthorId(Long authorId) {
+        List<PostEntity> postEntities = jpaPostRepository.findAllByAuthorId(authorId);
+        return postEntities.stream()
+            .map(PostEntity::toPost)
+            .collect(Collectors.toList());
+    }
+
+    @Override
+    public void deleteById(Long id) {
         jpaPostRepository.deleteById(id);
     }
 }

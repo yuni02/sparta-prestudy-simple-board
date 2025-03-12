@@ -7,6 +7,7 @@ import com.sparta.yuni.post.dto.UpdatePostRequestDto;
 import com.sparta.yuni.user.application.UserService;
 import com.sparta.yuni.user.domain.User;
 import jakarta.transaction.Transactional;
+import java.util.List;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -24,6 +25,10 @@ public class PostService {
         this.postRepository = postRepository;
         this.likeRepository = likeRepository;
         this.commentRepository = commentRepository;
+    }
+
+    public List<Post> getAllPost(Long authorId){
+        return postRepository.findByAuthorId(authorId);
     }
 
     public Post getPost(Long id) {
@@ -68,18 +73,13 @@ public class PostService {
     }
 
     @Transactional
-    public Post deletePost(Long postId) {
-        Post post = getPost(postId);
-
-        // 2. 게시물에 달린 댓글 삭제
-        commentRepository.deleteAllByPostIdAndReturn(post.getId()).forEach(comment -> likeRepository.deleteAllByComment(comment));
-
-        // 3. 게시물의 좋아요 삭제
-        likeRepository.deleteAllByTargetId(post.getId());
-
-        // 4. 게시물 자체 삭제
-        postRepository.delete(postId);
-
-        return post;
+    public void deletePost(Long postId) {
+        postRepository.deleteById(postId);
     }
+
+    public List<Post> getAllPosts(Long authorId) {
+        return postRepository.findByAuthorId(authorId);
+    }
+
+
 }

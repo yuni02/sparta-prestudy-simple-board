@@ -1,5 +1,6 @@
-package com.sparta.yuni.user.application;
+package com.sparta.yuni.user.repository;
 
+import com.sparta.yuni.post.repository.post_queue.UserPostQueueCommandRepository;
 import com.sparta.yuni.user.application.interfaces.UserRelationRepository;
 import com.sparta.yuni.user.domain.User;
 import com.sparta.yuni.user.repository.entity.UserEntity;
@@ -9,15 +10,17 @@ import com.sparta.yuni.user.repository.jpa.JpaUserRelationRepository;
 import com.sparta.yuni.user.repository.jpa.JpaUserRepository;
 import jakarta.transaction.Transactional;
 import java.util.List;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@RequiredArgsConstructor
-public class UserReplationRepositoryImpl implements UserRelationRepository {
+@AllArgsConstructor
+public class UserRelationRepositoryImpl implements UserRelationRepository {
 
     private final JpaUserRelationRepository jpaUserRelationRepository;
     private final JpaUserRepository jpaUserRepository;
+    private final UserPostQueueCommandRepository commandRepository;
 
     @Override
     public boolean isAlreadyFollow(User user, User targetUser) {
@@ -25,22 +28,22 @@ public class UserReplationRepositoryImpl implements UserRelationRepository {
         return jpaUserRelationRepository.existsById(id);
     }
 
+
     @Override
     @Transactional
     public void save(User user, User targetUser) {
-
         UserRelationEntity entity = new UserRelationEntity(user.getId(), targetUser.getId());
         jpaUserRelationRepository.save(entity);
         jpaUserRepository.saveAll(List.of(new UserEntity(user), new UserEntity(targetUser)));
-
+        commandRepository.saveFollowPost(user.getId(), targetUser.getId());
     }
 
     @Override
     @Transactional
     public void delete(User user, User targetUser) {
-
         UserRelationIdEntity id = new UserRelationIdEntity(user.getId(), targetUser.getId());
         jpaUserRelationRepository.deleteById(id);
         jpaUserRepository.saveAll(List.of(new UserEntity(user), new UserEntity(targetUser)));
+        commandRepository.deleteUnfollowPost(user.getId(), targetUser.getId());
     }
 }
