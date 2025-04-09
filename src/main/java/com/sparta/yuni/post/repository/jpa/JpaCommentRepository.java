@@ -12,8 +12,8 @@ import org.springframework.data.repository.query.Param;
 public interface JpaCommentRepository extends JpaRepository<CommentEntity, Long> {
 
     @Modifying
-    @Query(value = "UPDATE CommentEntity c SET c.likeCount= :#{#comment.getLikeCount()}, c.updDt = now() WHERE c.id = :#{#comment.getId()}")
-    void updateLikeCount(Comment comment);
+    @Query(value = "UPDATE CommentEntity c SET c.likeCount= c.likeCount + :likeCount, c.updDt = now() WHERE c.id = :commentId")
+    void updateLikeCount(Long commentId, Integer likeCount);
 
     @Modifying
     @Query(value = "UPDATE CommentEntity c SET c.content = :#{#comment.getContent()}, c.updDt = now() WHERE c.id = :#{#comment.getId()}")

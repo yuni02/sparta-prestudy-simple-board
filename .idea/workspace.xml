@@ -4,25 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c22eb15f-a9b3-4de0-85bc-7ae108b3924c" name="Changes" comment="[fix]: 글 삭제 api 추가">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/dto/PostResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/UserPostQueueCommandRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/post/UserPostQueueEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaUserPostQueueRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/post_queue/UserPostQueueCommandRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/ui/FeedController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/ui/dto/GetContentResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/ui/dto/GetPostContentResponseDto.java" afterDir="false" />
+    <list default="true" id="c22eb15f-a9b3-4de0-85bc-7ae108b3924c" name="Changes" comment="[feat]: 팔로우한 사람의 게시글이 보이고 언팔로우하면 사라지는 api 추가 및 버그 수정&#10;&#10;- feed api 추가 중">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/post_queue/UserPostQueueQueryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/post_queue/UserPostQueueQueryRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/PostRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/PostRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/LikeRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/LikeRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/UserPostQueueCommandRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/post_queue/UserPostQueueCommandRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaCommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaCommentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaPostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaPostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/ui/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/ui/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserRelationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserRelationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserReplationRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/UserRelationRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/jpa/JpaUserRelationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/jpa/JpaUserRelationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/ui/FeedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/ui/FeedController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +132,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Build community_feed.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
     "Gradle.PositiveIntegerCounterTest.executor": "Run",
     "Gradle.PositiveIntegerCounterTest.givenCreatedAndIncrease_whenDecrease_thenCountIsZero.executor": "Run",
     "Gradle.PositiveIntegerCounterTest.givenCreated_whenIncrease_thenCountIsOne.executor": "Run",
@@ -166,7 +157,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "Spring Boot.Application.executor": "Debug",
+    "Spring Boot.Application.executor": "Run",
     "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/jennie/Documents/fastcampus/community_feed/src/main/resources",
@@ -175,9 +166,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.17356321",
     "settings.editor.selected.configurable": "com.intellij.platform.ide.impl.presentationAssistant.PresentationAssistantConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
@@ -364,7 +355,10 @@
       <workItem from="1741557746742" duration="600000" />
       <workItem from="1741558547487" duration="1179000" />
       <workItem from="1741605220012" duration="9937000" />
-      <workItem from="1741699342064" duration="17613000" />
+      <workItem from="1741699342064" duration="18866000" />
+      <workItem from="1742218601962" duration="3947000" />
+      <workItem from="1742293101623" duration="618000" />
+      <workItem from="1742617197936" duration="6167000" />
     </task>
     <task id="LOCAL-00001" summary="[feat]: 커뮤니티 게시판 User, Post, Comment, Like 엔티티 객체 생성해서 디비 연동 후 Table 생성">
       <option name="closed" value="true" />
@@ -438,7 +432,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741558311463</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="[feat]: 팔로우한 사람의 게시글이 보이고 언팔로우하면 사라지는 api 추가 및 버그 수정&#10;&#10;- feed api 추가 중">
+      <option name="closed" value="true" />
+      <created>1741758984113</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1741758984113</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +467,8 @@
     <MESSAGE value="[feat]: 댓글 수정, 작성 / 글 작성, 수정 기능 구현" />
     <MESSAGE value="[fix]: swagger 설정 및 모듈 추가 , comment 작성 api 오류 수정 &#10;&#10;- Comment의 like 메서드에서 저자랑 일치하는 지 검증하는 코드 조건이 거꾸로 되어있었음." />
     <MESSAGE value="[fix]: 글 삭제 api 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="[fix]: 글 삭제 api 추가" />
+    <MESSAGE value="[feat]: 팔로우한 사람의 게시글이 보이고 언팔로우하면 사라지는 api 추가 및 버그 수정&#10;&#10;- feed api 추가 중" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat]: 팔로우한 사람의 게시글이 보이고 언팔로우하면 사라지는 api 추가 및 버그 수정&#10;&#10;- feed api 추가 중" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

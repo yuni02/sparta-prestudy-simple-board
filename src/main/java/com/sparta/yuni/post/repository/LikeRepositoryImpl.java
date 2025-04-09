@@ -43,14 +43,14 @@ public class LikeRepositoryImpl implements LikeRepository {
     public void like(Post post, User user) {
         LikeEntity likeEntity = new LikeEntity(post, user);
         entityManager.persist(likeEntity); //불필요하게 저장안되게 함. 동일한 id를 넣어도 pk 제약 때문에 중복 데이터 삽입 방지됨.
-        jpaPostRepository.updateLikeCount(new PostEntity(post));
+        jpaPostRepository.updateLikeCount(post.getId(), 1);
     }
 
     @Override
     public void like(Comment comment, User user) {
         LikeEntity likeEntity = new LikeEntity(comment, user);
         jpaLikeRepository.save(likeEntity);
-        jpaCommentRepository.updateLikeCount(comment);
+        jpaCommentRepository.updateLikeCount(comment.getId(), 1);
 
     }
 
@@ -59,14 +59,14 @@ public class LikeRepositoryImpl implements LikeRepository {
 
         LikeEntity likeEntity = new LikeEntity(post, user);
         jpaLikeRepository.deleteById(likeEntity.getId());
-        jpaPostRepository.updateLikeCount(new PostEntity(post));
+        jpaPostRepository.updateLikeCount(post.getId(), -1);
     }
 
     @Override
     public void unlike(Comment comment, User user) {
         LikeEntity likeEntity = new LikeEntity(comment, user);
         jpaLikeRepository.deleteById(likeEntity.getId());
-        jpaCommentRepository.updateLikeCount(comment);
+        jpaCommentRepository.updateLikeCount(comment.getId(), -1);
 
     }
 

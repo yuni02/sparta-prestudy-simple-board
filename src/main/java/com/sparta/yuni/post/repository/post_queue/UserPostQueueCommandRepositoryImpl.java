@@ -1,10 +1,9 @@
-package com.sparta.yuni.post.repository;
+package com.sparta.yuni.post.repository.post_queue;
 
 import com.sparta.yuni.post.repository.entity.post.PostEntity;
 import com.sparta.yuni.post.repository.entity.post.UserPostQueueEntity;
 import com.sparta.yuni.post.repository.jpa.JpaPostRepository;
 import com.sparta.yuni.post.repository.jpa.JpaUserPostQueueRepository;
-import com.sparta.yuni.post.repository.post_queue.UserPostQueueCommandRepository;
 import com.sparta.yuni.user.repository.entity.UserEntity;
 import com.sparta.yuni.user.repository.jpa.JpaUserRelationRepository;
 import jakarta.transaction.Transactional;
