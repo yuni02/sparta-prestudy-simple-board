@@ -1,5 +1,5 @@
 package com.sparta.yuni.auth.application.dto;
 
-public class SendEmailRequestDto {
+public record SendEmailRequestDto (String email){
 
 }

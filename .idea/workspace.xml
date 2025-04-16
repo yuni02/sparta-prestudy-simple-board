@@ -4,21 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c22eb15f-a9b3-4de0-85bc-7ae108b3924c" name="Changes" comment="[feat]: 팔로우한 사람의 게시글이 보이고 언팔로우하면 사라지는 api 추가 및 버그 수정&#10;&#10;- feed api 추가 중">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/auth/application/dto/SendEmailRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/auth/ui/SignUpController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/post/FeedAcceptanceSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/post/FeedAcceptanceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/post/UserAcceptanceSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/steps/SingUpAcceptanceSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/utils/AcceptanceTestTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/utils/DataLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/utils/DatabaseCleanup.java" afterDir="false" />
+    <list default="true" id="c22eb15f-a9b3-4de0-85bc-7ae108b3924c" name="Changes" comment="[chore]: 인증 코드 추가 위해서 이전 코드 git 에서 복붙">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/auth/SignUpAcceptanceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/dto/CreatePostRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/dto/CreatePostRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/dto/GetContentResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/dto/GetPostContentResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/dto/CreateUserRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/dto/CreateUserRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/auth/application/dto/SendEmailRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/auth/application/dto/SendEmailRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/post/PostEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/post/PostEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/dto/GetUserResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/dto/GetUserResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/domain/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/domain/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/utils/AcceptanceTestTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/utils/AcceptanceTestTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/utils/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/utils/DataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/domain/UserInfoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/domain/UserInfoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +129,7 @@
 }</component>
   <component name="ProjectId" id="2pdz9Fja33dD7VPk5uZ1qREFxJk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -368,7 +369,7 @@
       <workItem from="1742293101623" duration="618000" />
       <workItem from="1742617197936" duration="6167000" />
       <workItem from="1744157395597" duration="6611000" />
-      <workItem from="1744717356410" duration="3524000" />
+      <workItem from="1744717356410" duration="6275000" />
     </task>
     <task id="LOCAL-00001" summary="[feat]: 커뮤니티 게시판 User, Post, Comment, Like 엔티티 객체 생성해서 디비 연동 후 Table 생성">
       <option name="closed" value="true" />
@@ -458,7 +459,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744157553791</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="[chore]: 인증 코드 추가 위해서 이전 코드 git 에서 복붙">
+      <option name="closed" value="true" />
+      <created>1744726185216</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1744726185216</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,7 +495,9 @@
     <MESSAGE value="[fix]: swagger 설정 및 모듈 추가 , comment 작성 api 오류 수정 &#10;&#10;- Comment의 like 메서드에서 저자랑 일치하는 지 검증하는 코드 조건이 거꾸로 되어있었음." />
     <MESSAGE value="[fix]: 글 삭제 api 추가" />
     <MESSAGE value="[feat]: 팔로우한 사람의 게시글이 보이고 언팔로우하면 사라지는 api 추가 및 버그 수정&#10;&#10;- feed api 추가 중" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat]: 팔로우한 사람의 게시글이 보이고 언팔로우하면 사라지는 api 추가 및 버그 수정&#10;&#10;- feed api 추가 중" />
+    <MESSAGE value="[feat]: 인증 코드 추가 위해서 이전 코드 git ∂" />
+    <MESSAGE value="[chore]: 인증 코드 추가 위해서 이전 코드 git 에서 복붙" />
+    <option name="LAST_COMMIT_MESSAGE" value="[chore]: 인증 코드 추가 위해서 이전 코드 git 에서 복붙" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

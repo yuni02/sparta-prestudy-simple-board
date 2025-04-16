@@ -10,14 +10,25 @@ import org.springframework.test.context.ActiveProfiles;
 public class AcceptanceTestTemplate {
 
     @Autowired
-    private DatabaseCleanup databaseCleanup;
+    private DatabaseCleanup cleanup;
     @Autowired
     private DataLoader dataLoader;
 
     @BeforeEach
     public void setUp() {
-        databaseCleanup.execute();
+        cleanup.execute();
         dataLoader.loadData();
     }
+
+    protected void cleanUp(){
+        cleanup.execute();
+
+    }
+
+    protected String getEmailToken(String email){
+        return dataLoader.getEmailToken(email);
+    }
+
+
 
 }

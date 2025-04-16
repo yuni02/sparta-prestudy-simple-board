@@ -94,8 +94,6 @@ public class User {
         return info.getProfileImageUrl();
     }
 
-    public String getPassword(){
-        return info.getPassword();
-    }
+
 
 }

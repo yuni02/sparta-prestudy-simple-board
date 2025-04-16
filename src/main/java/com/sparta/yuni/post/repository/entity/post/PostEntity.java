@@ -55,14 +55,12 @@ public class PostEntity extends TimeBaseEntity {
         this.author = new UserEntity(post.getAuthor());
         this.content = post.getContent();
         this.state = post.getState();
-        this.password = post.getPassword();
         this.likeCount = post.getLikeCount();
     }
 
     public Post toPost(){
         return Post.builder()
             .id(id)
-            .password(password)
             .author(author.toUser())
             .content(new PostContent(content))
             .state(state)

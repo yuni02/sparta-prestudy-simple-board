@@ -19,11 +19,10 @@ public class Post {
     private final User author;
     private final Content content;
     private PostPublicationState state;
-    private final String password;
     private final PositiveIntegerCounter likeCount;
 
     @Builder
-    public Post(Long id, User author, Content content, PostPublicationState state, String password,
+    public Post(Long id, User author, Content content, PostPublicationState state,
         PositiveIntegerCounter positiveIntegerCounter) {
         if (author == null) {
             throw new IllegalArgumentException("author should not be null");
@@ -33,7 +32,6 @@ public class Post {
         }
 
         this.id = id;
-        this.password = password;
 
         this.author = author;
         this.content = content;
@@ -41,18 +39,17 @@ public class Post {
         this.likeCount = positiveIntegerCounter;
     }
 
-    public Post(Long id, User author, Content content, String password) {
-        this(id, author, content, PostPublicationState.PUBLIC, password,
+    public Post(Long id, User author, Content content) {
+        this(id, author, content, PostPublicationState.PUBLIC,
             new PositiveIntegerCounter());
     }
 
-    public Post(Long id, User author, String content, String password) {
-        this(id, author, new PostContent(content), PostPublicationState.PUBLIC, password,
+    public Post(Long id, User author, String content) {
+        this(id, author, new PostContent(content), PostPublicationState.PUBLIC,
             new PositiveIntegerCounter());
     }
 
-    public void updateContent(User user, String content, PostPublicationState state,
-        String password, String title) {
+    public void updateContent(User user, String content, PostPublicationState state, String title) {
         if (!author.equals(user)) {
             throw new IllegalArgumentException("only author can update content");
         }

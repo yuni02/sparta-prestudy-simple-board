@@ -13,11 +13,10 @@ class UserInfoTest {
         // given
         String name = "abcd";
         String profileImageUrl = "";
-        String password = "";
         // when
 
         // then
-        assertDoesNotThrow(()-> new UserInfo(name, profileImageUrl, password));
+        assertDoesNotThrow(()-> new UserInfo(name, profileImageUrl));
     }
 
     @Test
@@ -25,11 +24,10 @@ class UserInfoTest {
         // given
         String name = "";
         String profileImageUrl = "";
-        String password = "";
 
         // when
         // then
-        assertThrows(IllegalArgumentException.class, ()-> new UserInfo(name, profileImageUrl, password));
+        assertThrows(IllegalArgumentException.class, ()-> new UserInfo(name, profileImageUrl));
     }
 
 
