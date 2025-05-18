@@ -5,20 +5,199 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c22eb15f-a9b3-4de0-85bc-7ae108b3924c" name="Changes" comment="[chore]: 인증 코드 추가 위해서 이전 코드 git 에서 복붙">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/auth/SignUpAcceptanceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/admin/repository/UserStatsQueryRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/admin/ui/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/admin/ui/dto/GetTableListResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/admin/ui/dto/users/GetDailyRegisterUserResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/admin/ui/dto/users/GetUserTableRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/admin/ui/dto/users/GetUserTableResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/admin/ui/query/UserStatsQueryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/application/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/application/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/application/dto/CreateUserAuthRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/application/dto/LoginRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/application/dto/UserAccessTokenResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/application/interfaces/EmailSendRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/application/interfaces/EmailVerificationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/application/interfaces/UserAuthRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/application/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/application/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/application/dto/CreateUserAuthRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/application/dto/LoginRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/application/dto/SendEmailRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/application/dto/UserAccessTokenResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/application/interfaces/EmailSendRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/application/interfaces/EmailVerificationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/application/interfaces/UserAuthRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/domain/Email.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/domain/Password.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/domain/RandomTokenGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/domain/SHA256.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/domain/TokenProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/domain/UserAuth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/domain/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/repository/EmailSendRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/repository/EmailVerificationRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/repository/UserAuthRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/repository/entity/EmailVerificationEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/repository/entity/UserAuthEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/repository/jpa/JpaEmailVerificationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/repository/jpa/JpaUserAuthRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/ui/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/auth/ui/SignUpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/domain/Email.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/domain/Password.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/domain/RandomTokenGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/domain/SHA256.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/domain/TokenProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/domain/UserAuth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/domain/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/repository/EmailSendRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/repository/EmailVerificationRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/repository/UserAuthRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/repository/entity/EmailVerificationEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/repository/entity/UserAuthEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/repository/jpa/JpaEmailVerificationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/repository/jpa/JpaUserAuthRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/ui/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/common/TimeCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/common/domain/Pageable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/dto/SendEmailRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/application/dto/CreatePostRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/application/dto/GetContentResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/CommentQueryRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/post_queue/UserQueueRedisRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/post_queue/UserQueueRedisRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/assets/demo/chart-bar-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/assets/demo/datatables-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/assets/img/error-404-monochrome.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/js/datatables-simple-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/posts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/users.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/acceptance/auth/AuthAcceptanceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/acceptance/auth/LoginAcceptanceSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/acceptance/auth/LoginAcceptanceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/acceptance/auth/SignUpAcceptanceSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/acceptance/post/FeedAcceptanceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/acceptance/utils/AcceptanceTestTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/acceptance/utils/DataLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/auth/domain/EmailTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/auth/domain/PasswordTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/auth/domain/RandomTokenGeneratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/auth/domain/TokenProviderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/common/FakeObjectFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/common/PageableTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/common/PositiveIntegerCounterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/post/application/CommentServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/post/application/PostServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/post/application/PostServiceTestTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/post/domain/PostTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/post/domain/comment/CommentTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/post/domain/content/CommentContentTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/post/domain/content/DatetimeInfoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/post/domain/content/PostContentTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/post/repository/FakeCommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/post/repository/FakeLikeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/post/repository/FakePostRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/user/application/UserRelationServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/user/application/UserServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/user/domain/UserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/auth/application/dto/SendEmailRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/auth/application/dto/SendEmailRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/post/PostEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/post/PostEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/dto/GetUserResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/dto/GetUserResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/domain/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/domain/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/utils/AcceptanceTestTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/utils/AcceptanceTestTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/utils/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/utils/DataLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/domain/UserInfoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/domain/UserInfoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/auth/application/dto/SendEmailRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/application/dto/SendEmailRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/auth/ui/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth/ui/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/common/config/QueryDslConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/common/config/QueryDslConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/common/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/common/domain/PositiveIntegerCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/common/domain/PositiveIntegerCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/common/domain/exception/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/common/domain/exception/ErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/common/repository/entity/TimeBaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/common/repository/TimeBaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/common/ui/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/common/ui/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/common/ui/HealthCheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/common/ui/HealthCheckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/common/ui/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/common/ui/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/dto/PostResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/application/interfaces/CommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/application/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/LikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/application/interfaces/LikeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/application/interfaces/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/application/interfaces/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/application/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/domain/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/comment/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/domain/comment/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/common/DatetimeInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/domain/common/DatetimeInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/content/CommentContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/domain/content/CommentContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/content/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/domain/content/Content.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/content/PostContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/domain/content/PostContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/domain/content/PostPublicationState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/domain/PostPublicationState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/dto/CreateCommentRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/application/dto/CreateCommentRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/dto/CreatePostRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/dto/GetPostContentResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/dto/LikeRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/application/dto/LikeRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/dto/UpdateCommentRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/application/dto/UpdateCommentRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/dto/UpdatePostRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/application/dto/UpdatePostRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/CommentRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/CommentRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/LikeRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/LikeRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/PostRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/PostRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/comment/CommentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/entity/comment/CommentEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/like/LikeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/entity/like/LikeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/like/LikeId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/entity/like/LikeId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/like/LikeTarget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/entity/like/LikeTarget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/post/PostEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/entity/post/PostEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/post/PostPublicationStateConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/entity/post/PostPublicationStateConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/entity/post/UserPostQueueEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/entity/post/UserPostQueueEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaCommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/jpa/JpaCommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaLikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/jpa/JpaLikeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaPostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/jpa/JpaPostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/jpa/JpaUserPostQueueRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/jpa/JpaUserPostQueueRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/post_queue/UserPostQueueCommandRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/post_queue/UserPostQueueCommandRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/post_queue/UserPostQueueCommandRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/post_queue/UserPostQueueCommandRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/post_queue/UserPostQueueQueryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/post_queue/UserPostQueueQueryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/repository/post_queue/UserPostQueueQueryRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository/post_queue/UserPostQueueQueryRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/ui/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/ui/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/ui/FeedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/ui/FeedController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/post/ui/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/ui/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserRelationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/application/UserRelationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/application/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/dto/CreateUserRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/application/dto/CreateUserRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/dto/FollowUserRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/application/dto/FollowUserRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/dto/GetUserListResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/application/dto/GetUserListResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/dto/GetUserResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/application/dto/GetUserResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/interfaces/UserRelationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/application/interfaces/UserRelationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/application/interfaces/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/application/interfaces/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/domain/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/domain/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/UserRelationRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/repository/UserRelationRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/repository/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/repository/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/entity/UserRelationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/repository/entity/UserRelationEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/entity/UserRelationIdEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/repository/entity/UserRelationIdEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/jpa/JpaUserListPagingQueryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/repository/jpa/JpaUserListPagingQueryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/jpa/JpaUserListQueryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/repository/jpa/JpaUserListQueryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/jpa/JpaUserRelationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/repository/jpa/JpaUserRelationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/jpa/JpaUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/repository/jpa/JpaUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/ui/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/ui/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/ui/UserRelationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/user/ui/UserRelationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/ui/dto/GetContentResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/ui/dto/GetPostContentResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/application/dto/GetPostContentResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/auth/SignUpAcceptanceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/post/FeedAcceptanceSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/acceptance/post/FeedAcceptanceSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/post/FeedAcceptanceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/post/UserAcceptanceSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/acceptance/post/UserAcceptanceSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/steps/SingUpAcceptanceSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/utils/AcceptanceTestTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/utils/DataLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/utils/DatabaseCleanup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/acceptance/utils/DatabaseCleanup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/common/domain/PositiveIntegerCounterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/application/UserRelationServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/application/UserServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/domain/UserInfoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/domain/UserTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/repository/FakeUserRelationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/user/repository/FakeUserRelationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/yuni/user/repository/FakeUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fastcampus/community_feed/user/repository/FakeUserRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +231,12 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="community_feed" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="community_feed" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
               <path>
@@ -59,11 +244,6 @@
                 <item name="community_feed" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="other" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="community_feed" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -140,6 +320,7 @@
   "keyToString": {
     "Gradle.Build community_feed.executor": "Run",
     "Gradle.Download Sources.executor": "Run",
+    "Gradle.PageableTest.executor": "Run",
     "Gradle.PositiveIntegerCounterTest.executor": "Run",
     "Gradle.PositiveIntegerCounterTest.givenCreatedAndIncrease_whenDecrease_thenCountIsZero.executor": "Run",
     "Gradle.PositiveIntegerCounterTest.givenCreated_whenIncrease_thenCountIsOne.executor": "Run",
@@ -155,6 +336,7 @@
     "Gradle.UserTest.givenTwoUser_whenUnfollow_thenNotDecreaseUserCount.executor": "Run",
     "Gradle.UserTest.givenTwoUser_whenUser1FollowUser2_thenIncreaseUserCount.executor": "Run",
     "Gradle.community_feed [:Main.main()].executor": "Run",
+    "Gradle.community_feed [build].executor": "Run",
     "Gradle.community_feed [clean].executor": "Run",
     "Gradle.community_feed [compileJava].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
@@ -164,10 +346,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "Spring Boot.Application (1).executor": "Run",
     "Spring Boot.Application.executor": "Run",
+    "deletionFromPopupRequiresConfirmation": "false",
     "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/jennie/Documents/fastcampus/community_feed/src/test/java/com/sparta/yuni/acceptance",
+    "last_opened_file_path": "/Users/jennie/Documents/fastcampus/nine_domain/community_feed/src/main/java/org/fastcampus/community_feed",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -182,28 +366,59 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance" />
-      <recent name="$PROJECT_DIR$/src/test/java/com/sparta/yuni/acceptance/" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed" />
+      <recent name="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/auth" />
+      <recent name="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/post/repository" />
+      <recent name="$PROJECT_DIR$/src/test/java" />
+      <recent name="$PROJECT_DIR$/src/main/java/org/fastcampus/community_feed/admin/ui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/sparta/yuni/common/" />
       <recent name="$PROJECT_DIR$/src/main/java/com/sparta/yuni/user/repository/" />
     </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="org.fastcampus.community_feed.post.repository.post_queue" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.fastcampus.community_feed.common.repository" />
+      <recent name="com.sparta.yuni.admin.ui.dto" />
       <recent name="com.sparta.yuni.post.repository" />
       <recent name="com.sparta.yuni.user.repository" />
       <recent name="com.sparta.yuni.common.domain" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.fastcampus.community_feed.auth.application.dto" />
+      <recent name="org.fastcampus.community_feed.auth.ui" />
+      <recent name="org.fastcampus.community_feed.admin.repository" />
       <recent name="com.sparta.yuni.user.ui.dto" />
       <recent name="com.sparta.yuni.post.repository.post_queue" />
-      <recent name="com.sparta.yuni.post.dto" />
-      <recent name="com.sparta.yuni.user.ui" />
-      <recent name="com.sparta.yuni.post.repository.entity.like" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager" selected="Gradle.community_feed [compileJava]">
+    <configuration name="PageableTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.sparta.yuni.common.domain.PageableTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="PositiveIntegerCounterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -228,28 +443,26 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="UserServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="community_feed [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.sparta.yuni.user.application.UserServiceTest&quot;" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="community_feed [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -296,34 +509,28 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="ACTIVE_PROFILES" value="-Duser.language=ko" />
+    <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="community_feed.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sparta.yuni.Application" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sparta.yuni.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.fastcampus.community_feed.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.community_feed [build]" />
+      <item itemvalue="Gradle.PageableTest" />
       <item itemvalue="Gradle.PositiveIntegerCounterTest" />
       <item itemvalue="Gradle.community_feed [clean]" />
       <item itemvalue="Gradle.community_feed [compileJava]" />
-      <item itemvalue="Gradle.UserServiceTest" />
-      <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="Spring Boot.Application (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.Application" />
-        <item itemvalue="Gradle.PositiveIntegerCounterTest" />
         <item itemvalue="Gradle.community_feed [compileJava]" />
+        <item itemvalue="Gradle.community_feed [build]" />
         <item itemvalue="Gradle.community_feed [clean]" />
-        <item itemvalue="Gradle.UserServiceTest" />
+        <item itemvalue="Gradle.PageableTest" />
+        <item itemvalue="Gradle.PositiveIntegerCounterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -369,7 +576,10 @@
       <workItem from="1742293101623" duration="618000" />
       <workItem from="1742617197936" duration="6167000" />
       <workItem from="1744157395597" duration="6611000" />
-      <workItem from="1744717356410" duration="6275000" />
+      <workItem from="1744717356410" duration="8280000" />
+      <workItem from="1747357550200" duration="9471000" />
+      <workItem from="1747404708515" duration="4425000" />
+      <workItem from="1747439182458" duration="6146000" />
     </task>
     <task id="LOCAL-00001" summary="[feat]: 커뮤니티 게시판 User, Post, Comment, Like 엔티티 객체 생성해서 디비 연동 후 Table 생성">
       <option name="closed" value="true" />
@@ -467,7 +677,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744726185216</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="[chore]: 인증 코드 추가 위해서 이전 코드 git 에서 복붙">
+      <option name="closed" value="true" />
+      <created>1744816650405</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1744816650405</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

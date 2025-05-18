@@ -4,6 +4,11 @@ spring:
     username: jennie
     password: pproro91^^
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+
   jpa:
     show-sql: true
     hibernate:
